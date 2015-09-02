@@ -20,6 +20,8 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120 // only used for scrollbar row height dimension
         
 //        Business.searchWithTerm("Thai", completion: { (businesses: [Business]!, error: NSError!) -> Void in
 //            self.businesses = businesses
@@ -52,6 +54,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("BusinessCell", forIndexPath: indexPath) as! BusinessCell
+        cell.business = self.businesses[indexPath.row]
         return cell
     }
 
