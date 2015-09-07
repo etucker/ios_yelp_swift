@@ -41,7 +41,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
                 println(business.name!)
                 println(business.address!)
             }
-        }
+        }        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
