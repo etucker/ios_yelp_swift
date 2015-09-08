@@ -21,7 +21,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 120 // only used for scrollbar row height dimension
+        tableView.estimatedRowHeight = 140 // only used for scrollbar row height dimension
         
 //        Business.searchWithTerm("Thai", completion: { (businesses: [Business]!, error: NSError!) -> Void in
 //            self.businesses = businesses
@@ -32,7 +32,11 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
 //            }
 //        })
         
-        Business.searchWithTerm("Restaurants", sort: .Distance, categories: ["asianfusion", "burgers"], deals: true) { (businesses: [Business]!, error: NSError!) -> Void in
+
+        Business.searchWithTerm("Restaurants", sort: .Distance,
+//        Business.searchWithTerm("Kanom", sort: .Distance,
+            categories: nil, //["thai", "asianfusion", "burgers"],
+            deals: true) { (businesses: [Business]!, error: NSError!) -> Void in
             self.businesses = businesses
             
             self.tableView.reloadData()

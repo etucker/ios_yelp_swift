@@ -2,14 +2,14 @@
 
 This is a Yelp search app using the [Yelp API](http://developer.rottentomatoes.com/docs/read/JSON).
 
-Time spent: `<Number of hours spent>`
+Time spent: `3 hours`
 
 ### Features
 
 #### Required
 
 - [ ] Search results page
-   - [/] Table rows should be dynamic height according to the content height
+   - [x] Table rows should be dynamic height according to the content height
    - [x] Custom cells should have the proper Auto Layout constraints
    - [ ] Search bar should be in the navigation bar (doesn't have to expand to show location like the real Yelp app does).
 - [ ] Filter page. Unfortunately, not all the filters are supported in the Yelp API.

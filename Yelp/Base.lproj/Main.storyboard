@@ -34,22 +34,22 @@
                                                         <constraint firstAttribute="height" constant="15" id="WIX-m0-a0i"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Grand Pu Bah" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6w3-8k-Lpd">
-                                                    <rect key="frame" x="99" y="8" width="115.5" height="18"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="469 reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTG-Zr-kmg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="469 reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTG-Zr-kmg">
                                                     <rect key="frame" x="190" y="32" width="71.5" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88 Division St, Mission Bay" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhL-fB-Cbu">
-                                                    <rect key="frame" x="99" y="55" width="163.5" height="16"/>
+                                                    <rect key="frame" x="99" y="55" width="205" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Thai, Seafood, Salad" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzO-2H-oyS">
+                                                    <rect key="frame" x="99" y="77" width="213" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkG-UC-bog">
@@ -58,7 +58,7 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.017 mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPj-1C-28D">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.017 mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPj-1C-28D">
                                                     <rect key="frame" x="260" y="8" width="52" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,10 +71,10 @@
                                                         <constraint firstAttribute="height" constant="83" id="lQK-7E-z72"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Thai, Seafood, Salad" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzO-2H-oyS">
-                                                    <rect key="frame" x="99" y="77" width="213" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="1. Grand Pu Bah" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6w3-8k-Lpd">
+                                                    <rect key="frame" x="99" y="8" width="153" height="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -92,15 +92,14 @@
                                                 <constraint firstAttribute="trailing" secondItem="rkG-UC-bog" secondAttribute="trailing" constant="8" id="Wda-1B-LN9"/>
                                                 <constraint firstItem="vPj-1C-28D" firstAttribute="top" secondItem="s2r-SW-pne" secondAttribute="top" constant="8" id="YtR-Rn-aUX"/>
                                                 <constraint firstItem="WeI-rW-lsy" firstAttribute="top" secondItem="6w3-8k-Lpd" secondAttribute="bottom" constant="6" id="c7D-BE-Hae"/>
-                                                <constraint firstItem="rkG-UC-bog" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VTG-Zr-kmg" secondAttribute="trailing" constant="6" id="eu7-4y-UM0"/>
                                                 <constraint firstItem="VTG-Zr-kmg" firstAttribute="top" secondItem="6w3-8k-Lpd" secondAttribute="bottom" constant="6" id="ijb-ir-Qsy"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="qhL-fB-Cbu" secondAttribute="trailing" constant="8" id="oGS-4N-fSX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qhL-fB-Cbu" secondAttribute="trailing" constant="8" id="oGS-4N-fSX"/>
                                                 <constraint firstAttribute="trailing" secondItem="KzO-2H-oyS" secondAttribute="trailing" constant="8" id="opj-2I-2fq"/>
                                                 <constraint firstItem="6w3-8k-Lpd" firstAttribute="leading" secondItem="oa2-fC-imq" secondAttribute="trailing" constant="8" id="ozi-Ll-JxQ"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KzO-2H-oyS" secondAttribute="bottom" constant="8" id="udO-rw-7dT"/>
                                                 <constraint firstItem="VTG-Zr-kmg" firstAttribute="leading" secondItem="WeI-rW-lsy" secondAttribute="trailing" constant="8" id="z7V-Yl-x4E"/>
                                                 <constraint firstItem="6w3-8k-Lpd" firstAttribute="top" secondItem="s2r-SW-pne" secondAttribute="top" constant="8" id="zTo-TQ-8oU"/>
-                                                <constraint firstItem="vPj-1C-28D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6w3-8k-Lpd" secondAttribute="trailing" constant="8" id="zUG-Cb-0QG"/>
+                                                <constraint firstItem="vPj-1C-28D" firstAttribute="leading" secondItem="6w3-8k-Lpd" secondAttribute="trailing" constant="8" id="zUG-Cb-0QG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
