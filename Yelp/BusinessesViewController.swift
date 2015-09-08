@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
     var businesses: [Business]!
     
@@ -18,6 +18,11 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let searchBar = UISearchBar()
+        searchBar.sizeToFit()
+        searchBar.delegate = self
+        navigationItem.titleView = searchBar
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -33,20 +38,41 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
 //        })
         
 
-        Business.searchWithTerm("Restaurants", sort: .Distance,
-//        Business.searchWithTerm("Kanom", sort: .Distance,
+        search("Restaurants")
+//        Business.searchWithTerm("Restaurants", sort: .Distance,
+//            categories: nil, //["thai", "asianfusion", "burgers"],
+//            deals: true) { (businesses: [Business]!, error: NSError!) -> Void in
+//            self.businesses = businesses
+//            self.tableView.reloadData()
+//            
+////            for business in businesses {
+////                println(business.name!)
+////                println(business.address!)
+////            }
+//        }
+    }
+    
+    func search(term: String) {
+        Business.searchWithTerm(term, sort: .Distance,
             categories: nil, //["thai", "asianfusion", "burgers"],
             deals: true) { (businesses: [Business]!, error: NSError!) -> Void in
-            self.businesses = businesses
-            
-            self.tableView.reloadData()
-            
-            for business in businesses {
-                println(business.name!)
-                println(business.address!)
-            }
-        }        
+                self.businesses = businesses
+                self.tableView.reloadData()
+
+                for business in businesses {
+                    println(business.name!)
+                    println(business.address!)
+                }
+        }
     }
+    
+    // --- UISearchBarDelegate handling
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        println("---")
+        println("Search Clicked!")
+        search(searchBar.text)
+    }
+    // --- end UISearchBarDelegate handling
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if businesses != nil {
