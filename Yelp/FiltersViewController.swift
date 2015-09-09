@@ -17,6 +17,8 @@ class FiltersViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var tableView: UITableView!
     weak var delegate: FiltersViewControllerDelegate?
     
+//    let defaults = NSUserDefaults.standardUserDefaults()
+    
     @IBAction func onCancelButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -57,11 +59,18 @@ class FiltersViewController: UIViewController, UITableViewDataSource, UITableVie
         filters["deal"] = switchStates[2][0]
         
         delegate?.filtersViewController?(self, didUpdateFilters: filters)
+        
+//        defaults.setObject(switchStates, forKey: "switchStates")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        let retrievedObj = defaults.objectForKey("switchStates")
+//        if retrievedObj != nil {
+//            switchStates = retrievedObj as! [[Int: Bool]]
+//        }
+        
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -145,15 +154,11 @@ class FiltersViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
-    /*
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+//    }
   
     var switchStates: [[Int: Bool]] = [[0: false], [0: false], [0: false], [0: false]]
     

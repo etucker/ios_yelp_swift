@@ -31,4 +31,4 @@ Time spent: `3 hours`
 
 ### Walkthrough
 
-![Video Walkthrough](...)
+![Video Walkthrough](https://raw.githubusercontent.com/etucker/ios_yelp_swift/master/yelp-walthrough.gif)
