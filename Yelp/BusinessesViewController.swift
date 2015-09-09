@@ -61,12 +61,12 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         searchTerm = searchBar.text
         search()
     }
-    
-    // TODO: Why doesn't this get called?
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        println("Search was cancelled")
-        searchTerm = "Restaurants"
-        search()
+        
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            searchTerm = "Restaurants"
+            search()
+        }
     }
     // --- end UISearchBarDelegate handling
     
