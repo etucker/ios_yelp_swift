@@ -13,9 +13,11 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     var businesses: [Business]!
     var searchTerm = "Restaurants"
     var searchCategories: [String]? = nil
+    var searchSort: YelpSortMode = YelpSortMode.BestMatched
+    var searchRadius: Double? = nil
+    var searchDeal: Bool? = false
     
     @IBOutlet weak var tableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,14 +36,12 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func search() {
-        doSearch(searchTerm, categories: searchCategories)
-    }
-
-    func doSearch(term: String, categories: [String]? = nil) {
-        Business.searchWithTerm(term, sort: .Distance,
-            categories: categories, //["thai", "asianfusion", "burgers"],
-            deals: true) { (businessesReturned: [Business]!, error: NSError!) -> Void in
-                println(error)
+        Business.searchWithTerm(
+            searchTerm,
+            sort: searchSort,
+            categories: searchCategories,
+            deals: searchDeal,
+            radius: searchRadius) { (businessesReturned: [Business]!, error: NSError!) -> Void in
                 self.updateBusinessList(businessesReturned)
         }
     }
@@ -104,6 +104,21 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         let categories = filters["categories"] as? [String]
         
         searchCategories = categories
+        
+        switch filters["sort"] as! String {
+            case "Distance": searchSort = YelpSortMode.Distance
+            case "HighestRated": searchSort = YelpSortMode.HighestRated
+            default: searchSort = YelpSortMode.BestMatched
+        }
+        
+        searchDeal = filters["deal"] as? Bool
+        
+        let radiusString = filters["radius"] as? String
+        if radiusString != nil {
+            searchRadius = NSString(string: radiusString!).doubleValue * 1609.34
+        }
+        
+        
         search()
     }
 
